@@ -1,0 +1,25 @@
+<!-- Below is a hard coded example question -->
+
+<section class="question-sec">
+
+	<h1>Should my software engineering team build the database in a horizontal slice?</h1>
+
+	<p>I am on a team a DBC that is building a knock off of stack overflow and my team is undecided on weather or not we should build the database together in one horizontal slice, or build features/user stories individually, and integrate them later.</p>
+
+</section>
+
+<section class="answer-sec">
+	<%= form_for @answer do |f| %>
+	  <%= f.text_area :body, size: "60x12" %><br>
+	  <%= f.submit "Create" %>
+	<% end %>
+
+
+	<h2>Answers</h2>
+
+	<% @answers.each do |answer| %>
+	<p><%= answer.body %></p>
+	<p><b>Votes: <%= answer.vote_count %></b></p>
+	<% end %>
+
+</section>
