@@ -1,28 +1,54 @@
-== README
+#STACK TOO DEEP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Jay
+* Herine
+* Becca
+* Devon
 
-Things you may want to cover:
+#MVP
 
-* Ruby version
+###User Stories
 
-* System dependencies
+- A user can sign up 
+- A user can sign in 
+- A user can sign out
 
-* Configuration
+- A user can post a question
+- A user can delete a question
+- A user can edit their question
 
-* Database creation
+- A user can answer a question
+- A user can up vote and down vote on question or answer
 
-* Database initialization
+##Schema:
+####- User_table:
++ user name,
++ email,
++ password,
++ password hash, or salt
 
-* How to run the test suite
+####- User_questions
++ user_id,
++ question_id
 
-* Services (job queues, cache servers, search engines, etc.)
+####- Question_table
++ title,
++ body,
++ vote_count(++)
 
-* Deployment instructions
+####- Questions_Answers_table
++ question_id,
++ answer_id
 
-* ...
+####- Answer_table
++ body,
++ vote_count
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
+
+
+
+
