@@ -2,14 +2,18 @@
 <%= link_to "Log In", new_session_path(session) %>
 <%= link_to "Log Out", delete_session_path(session) %>
 
-<%= form_for @question do |f| %>
-  <%= f.label :title %>:
-  <%= f.text_field :title %><br />
+<% unless session[:user_id].nil? %>
 
-  <%= f.label :body %>:
-  <%= f.text_area(:body, size: "50x10") %><br />
+  <%= form_for @question do |f| %>
+    <%= f.label :title %>:
+    <%= f.text_field :title %><br />
 
-  <%= f.submit %>
+    <%= f.label :body %>:
+    <%= f.text_area(:body, size: "50x10") %><br />
+
+    <%= f.submit %>
+  <% end %>
+
 <% end %>
 
 <aside class="questions-sidebar">
