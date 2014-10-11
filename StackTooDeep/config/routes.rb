@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   #   resources :products
   resources :questions
+  get '/questions/:id' => 'questions#show', as: :show_question
   # Example resource route with options:
   #   resources :products do
   #     member do
