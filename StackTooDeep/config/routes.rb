@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :sessions
+  resources :sessions, only: [:new, :create, :show]
+  delete '/sessions/:id' => 'sessions#destroy', as: :delete_session
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
