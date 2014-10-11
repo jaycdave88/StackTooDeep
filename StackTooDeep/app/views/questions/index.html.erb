@@ -1,4 +1,6 @@
 <%= link_to "Sign Up", new_user_path %>
+<%= link_to "Log In", new_session_path(session) %>
+<%= link_to "Log Out", delete_session_path(session) %>
 
 <%= form_for @question do |f| %>
   <%= f.label :title %>:
