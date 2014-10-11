@@ -1,0 +1,23 @@
+<section class="question-sec">
+
+	<h1><%= @question.title %></h1>
+
+	<p><%= @question.body %></p>
+
+</section>
+
+<section class="answer-sec">
+	<%= form_for @answer do |f| %>
+	  <%= f.text_area :body, size: "60x12" %><br>
+	  <%= f.submit "Create Answer" %>
+	<% end %>
+
+
+	<h2>Answers</h2>
+
+	<% @answers.each do |answer| %>
+	<p><%= answer.body %></p>
+	<p><b>Votes: <%= answer.vote_count %></b></p>
+	<% end %>
+
+</section>
