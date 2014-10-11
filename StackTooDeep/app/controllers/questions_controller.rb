@@ -16,6 +16,19 @@ class QuestionsController < ApplicationController
     @answers = Answer.all.order('vote_count DESC')
   end
 
+  def edit
+    @question = Question.find(params[:id])
+  end
+
+  def update
+    puts "Testing update params"
+    p params
+    @question = Question.find(params[:id])
+    p @question
+    @question.update(title: params[:question][:title], body: params[:question][:body])
+    redirect_to root_path
+  end
+
   def destroy
     @question = Question.find(params[:id])
     @question.destroy
