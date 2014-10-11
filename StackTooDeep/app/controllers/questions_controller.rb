@@ -10,6 +10,12 @@ class QuestionsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @question = Question.find(params[:id])
+    @answer = Answer.new
+    @answers = Answer.all.order('vote_count DESC')
+  end
+
   private
 
     def question_params
