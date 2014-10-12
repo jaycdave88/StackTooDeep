@@ -24,7 +24,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @question = Question.all
 
-
   end
 
 
