@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
 
   def index
+    @user = User.find_by(email: params[:email])
     @question = Question.new
     @questions = Question.all
   end
