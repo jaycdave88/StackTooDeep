@@ -5,7 +5,10 @@
 <%end%>
 
 <%= link_to "Log Out", delete_session_path(session) %>
+
+<% if session[:user_id] != nil%>
 <%= link_to "Profile", show_user_path(session[:user_id])%>
+<%end%>
 
 
 <% unless session[:user_id].nil? %>
