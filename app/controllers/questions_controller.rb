@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   def index
     @user = User.find_by(email: params[:email])
     @question = Question.new
-    @questions = Question.all
+    @questions = Question.all.order('created_at DESC')
   end
 
   def create
@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answer = Answer.new
-    @answers = Answer.all.order('vote_count DESC')
+    @answers = Answer.where(question_id: params[:id]).order('vote_count DESC')
   end
 
   def edit
@@ -38,7 +38,7 @@ class QuestionsController < ApplicationController
 
   private
 
-    def question_params
-      params.require(:question).permit(:title, :body, :user_id)
-    end
+  def question_params
+    params.require(:question).permit(:title, :body, :user_id)
+  end
 end
