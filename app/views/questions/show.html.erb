@@ -8,8 +8,10 @@
 
 <section class="answer-sec">
 	<%= form_for @answer do |f| %>
-	  <%= f.text_area :body, size: "60x12" %><br>
-	  <%= f.submit "Create Answer" %>
+	  <%= f.text_area :body, size: "60x12" %>
+	  <%= f.hidden_field :user_id, :value => session[:user_id] %>
+	  <%= f.hidden_field :question_id, :value => @question.id %>
+	  <%= f.submit %>
 	<% end %>
 
 

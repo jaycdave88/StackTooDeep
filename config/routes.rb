@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   # post 'answer/:id' => 'question#create_answer'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :answers
+  resources :answers
 
   #   resources :products
   resources :questions
