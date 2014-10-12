@@ -10,6 +10,7 @@
 
     <%= f.label :body %>:
     <%= f.text_area(:body, size: "50x10") %><br />
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
 
     <%= f.submit %>
   <% end %>
@@ -21,3 +22,4 @@
   <p><%= link_to question.title, show_question_path(question) %> </p>
 <% end %>
 </aside>
+
