@@ -4,7 +4,7 @@
     <p>
       <%@question.each do |q|%>
       <% if q.user_id == @user.id %>
-      <%= q.title %>
+      <%= q.title %><br>
       <%= q.body %>
       <%end%>
     </p>
