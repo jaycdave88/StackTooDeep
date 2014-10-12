@@ -18,6 +18,6 @@
 
 <aside class="questions-sidebar">
 	<% @questions.each do |question| %>
-  <p><%= link_to question.title, show_question_path(question) %> <%= link_to 'Edit', edit_question_path(question) %> <%= link_to 'Destroy',  { action: :destroy, id: question.id }, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <p><%= link_to question.title, show_question_path(question) %> </p>
 <% end %>
 </aside>
