@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
 
   resources :users
+  get '/users/:id' => 'users#show'
 
   resources :sessions, only: [:new, :create, :show]
   delete '/sessions/:id' => 'sessions#destroy', as: :delete_session
