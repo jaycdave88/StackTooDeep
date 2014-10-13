@@ -4,6 +4,13 @@ class AnswersController < ApplicationController
 		redirect_to :back
 	end
 
+	def vote
+		@answer = Answer.find(params[:answer_id])
+		@vote_value = params[:vote_value].to_i
+		@answer.update(vote_count: @answer.vote_count + @vote_value)
+		redirect_to :back
+	end
+
 	private
 
     def answer_params

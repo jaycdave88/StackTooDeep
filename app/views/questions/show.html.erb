@@ -20,6 +20,8 @@
 	<% @answers.each do |answer| %>
 	<p><%= answer.body %></p>
 	<p><b>Votes: <%= answer.vote_count %></b></p>
+	<%= link_to("Vote +", "/vote/#{answer.id}/1", method: :post) %>
+	<%= link_to("Vote -", "/vote/#{answer.id}/-1", method: :post) %>
 	<% end %>
 
 </section>
