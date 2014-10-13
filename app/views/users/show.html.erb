@@ -1,0 +1,12 @@
+<div class="col-md-6 col-md-offset-3 text-center">
+	<%= render "shared/nav" %>
+
+	<h1><%=@user.username.capitalize %>'s Profile</h1>
+	<h3>Questions Asked:</h3>
+      <%@question.each do |q|%>
+	      <h4><a href="/questions/<%= q.id =%>"><%= q.title %></a></h4>
+      <%end%>
+</div>
+
+
+

@@ -1,0 +1,14 @@
+<div class="col-md-6 col-md-offset-3 text-center">
+  <%= render "shared/nav" %>
+  <% unless session[:user_id].nil? %>
+  <a class= "btn btn-default add-bottom-margin" href="/questions/new">Post A Question</a>
+  <% end %>
+  <div class="col-md-12 answer-list">
+    <h2>Recent Questions</h2>
+    <% @questions.each do |question| %>
+    <h3><%= link_to question.title, show_question_path(question) %> - asked by <a href="/users/<%= question.user_id %>"><%= User.find(question.user_id).username %></a></h3>
+    <% end %>
+  </div>
+
+
+</div>
