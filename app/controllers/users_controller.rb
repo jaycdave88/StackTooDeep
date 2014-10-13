@@ -22,8 +22,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @question = Question.all
-
+    @question = Question.where(user_id: params[:id])
   end
 
 

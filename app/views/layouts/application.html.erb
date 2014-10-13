@@ -7,12 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="header-title">Stack-Too-Deep</h1>
+      </div>
+    </div>
+    <div class="row">
 
-  <%= yield %>
-  <div id="flash">
-    <% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
+      <%= yield %>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12 footer">
+        <h4>A DBC Project by <a href="http://www.linkedin.com/in/dbradleyfl">Devon</a>, <a href="http://www.linkedin.com/pub/herine-chin/22/87b/a61">Herine</a>, <a href="www.linkedin.com/in/jaycdave">Jay</a>, and <a href="">Rebecca</a></h4>
+      </div>
+    </div>
   </div>
+  
 </body>
 </html>

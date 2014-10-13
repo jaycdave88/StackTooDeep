@@ -40,3 +40,5 @@ gem 'bcrypt'
 
 gem "rspec-rails", group: [:development, :test]
 gem 'capybara'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'

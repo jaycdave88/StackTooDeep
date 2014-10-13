@@ -1,0 +1,64 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+input, textarea{
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 20px;
+}
+
+.add-bottom-margin{
+	margin-bottom: 20px;
+}
+
+.main-nav{
+	border-bottom: 1px solid black;
+	padding-bottom: 10px;
+	list-style: none;
+	margin-bottom: 50px;
+}
+
+.main-nav li{
+	font-size: 24px;	
+	margin: 0 20px;
+	display: inline;	
+}
+
+h1{
+	margin: 35px;
+}
+
+label{
+	font-size: 20px;
+}
+
+.header-title {
+	text-align: center;
+	font-size: 70px;
+	padding: 30px;
+	color: white;
+	background-color: black;
+}
+
+.answer-list h3{
+	margin: 50px;
+}
+
+.answer {
+	padding: 40px;
+	border-bottom: 1px solid black;
+}
+
+.vote-buttons input{
+	margin: 0px;
+	display: inline;
+}
+
+.footer{
+	margin-top: 100px;
+	border-top: 1px solid black;
+	padding: 50px;
+	text-align: center;
+}
